@@ -12,6 +12,10 @@ class App extends Component {
       todos
     }
     this.handleAddTodo = this.handleAddTodo.bind(this);
+    this.priortyCssClass = [];
+    this.priortyCssClass['low'] = 'warning';
+    this.priortyCssClass['medium'] = 'primary';
+    this.priortyCssClass['high'] = 'danger';
   }
 
   handleAddTodo(todo){
@@ -31,6 +35,11 @@ class App extends Component {
     })
   }
 
+  getClassName(priority){
+    
+    return this.priortyCssClass[priority];
+  }
+
 render(){  
     const todos = this.state.todos.map((todo, i) =>{ 
       return(
@@ -40,7 +49,8 @@ render(){
             
               <div className="card-header">
                 <h3>{ todo.title }</h3>
-                <span className="badge badge-pill badge-danger ml-2 p-2"> 
+                
+                <span className={"badge badge-pill badge-" + this.getClassName(todo.priority) + " ml-2 p-2"}> 
                 { todo.priority } 
                 </span>
               </div>

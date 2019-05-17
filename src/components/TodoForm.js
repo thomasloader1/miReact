@@ -48,9 +48,9 @@ class TodoForm extends Component {
 
                     <div className="form-group">
                         <select name="priority" className="form-control" onChange={this.handleInput}>
-                            <option>Baja</option>
-                            <option>Media</option>
-                            <option>Alta</option>
+                            <option value="low">Baja</option>
+                            <option value="medium">Media</option>
+                            <option value="high">Alta</option>
                         </select>
                     </div>
 
