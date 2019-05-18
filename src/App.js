@@ -13,9 +13,9 @@ class App extends Component {
     }
     this.handleAddTodo = this.handleAddTodo.bind(this);
     this.priortyCssClass = [];
-    this.priortyCssClass['low'] = 'warning';
-    this.priortyCssClass['medium'] = 'primary';
-    this.priortyCssClass['high'] = 'danger';
+    this.priortyCssClass['Baja'] = 'warning';
+    this.priortyCssClass['Media'] = 'primary';
+    this.priortyCssClass['Alta'] = 'danger';
   }
 
   handleAddTodo(todo){

@@ -8,7 +8,7 @@ class TodoForm extends Component {
             title: '',
             responsible: '',
             description: '',
-            priority: 'Low'
+            priority: 'Baja'
         };
         this.handleInput = this.handleInput.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,9 +48,9 @@ class TodoForm extends Component {
 
                     <div className="form-group">
                         <select name="priority" className="form-control" onChange={this.handleInput}>
-                            <option value="low">Baja</option>
-                            <option value="medium">Media</option>
-                            <option value="high">Alta</option>
+                            <option value="Baja">Baja</option>
+                            <option value="Media">Media</option>
+                            <option value="Alta">Alta</option>
                         </select>
                     </div>
 
